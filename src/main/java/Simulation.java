@@ -1,22 +1,29 @@
 public class Simulation {
-    Bins diceBin;
+    private Bins diceBin;
     int numOfDice;
     int rollingDiceNum;
+
 
     public Simulation (int numOfDice,int rollingDiceNum) {
         this.numOfDice = numOfDice;
         this.rollingDiceNum = rollingDiceNum;
+        diceBin = new Bins(numOfDice*6+ numOfDice);
     }
     // constructor
 
-    public Bins runSimulation (){
+    public void runSimulation (){
         Dice dice = new Dice(numOfDice);
-        diceBin = new Bins(numOfDice*6+ 1);
         for (int i = 0 ; i <rollingDiceNum; i++){
             diceBin.incrementBin(dice.tossAndSum());
-        } return diceBin;
+        }
     }
-    
+    public void printResult() {
+        for (int i=0 ; i <= numOfDice*6 ; i++ ){
+            System.out.println( diceBin.getBins(i));
+        }
+
+    }
+
 
 
 

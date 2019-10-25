@@ -5,7 +5,7 @@ public class testDice {
 
     @Test
     public void diceTest() {
-        int sum = Dice.tossAndSum();
+
 
     }
 }
