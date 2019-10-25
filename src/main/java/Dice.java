@@ -19,8 +19,6 @@ public class Dice {
         for (int i = 1; i <= numOfDice; i++) {
             diceResult += (int) (Math.random() * 6 + 1);
         }
-        System.out.println(diceResult);
-
         return diceResult;
 
 
