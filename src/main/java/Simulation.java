@@ -9,13 +9,15 @@ public class Simulation {
     }
     // constructor
 
-    public void diceSim (){
+    public Bins runSimulation (){
         Dice dice = new Dice(numOfDice);
+        diceBin = new Bins(numOfDice*6+ 1);
         for (int i = 0 ; i <rollingDiceNum; i++){
             diceBin.incrementBin(dice.tossAndSum());
-        }
+        } return diceBin;
     }
     
+
 
 
 }
