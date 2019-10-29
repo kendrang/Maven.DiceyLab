@@ -26,10 +26,17 @@ public class Simulation {
 
     public void getPercentage() {
         Double percentage = 0.00;
+
         for (int i=numOfDice ; i< numOfDice*6+1 ; i ++){
            percentage = (double)diceBin.getBins(i) /rollingDiceNum;
-           
-            System.out.println(i +  " Percent:" + percentage);
+
+           Integer numOfStars = (int) (percentage*100.0);
+           String stars = "";
+           for(int j=0 ; j <numOfStars ; j++){
+               stars += "*";
+           }
+
+            System.out.println(i +  " Percent:" + percentage + stars);
         }
 
 
