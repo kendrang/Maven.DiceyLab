@@ -3,6 +3,6 @@ public class MainApp {
         Simulation simulation = new Simulation(2, 1000);
         simulation.runSimulation();
         simulation.printResult();
-
+        simulation.getPercentage();
     }
 }

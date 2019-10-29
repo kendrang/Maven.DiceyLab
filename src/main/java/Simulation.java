@@ -18,9 +18,20 @@ public class Simulation {
         }
     }
     public void printResult() {
-        for (int i=0 ; i <= numOfDice*6 ; i++ ){
+        for (int i=numOfDice ; i <= numOfDice*6 ; i++ ){
             System.out.println( diceBin.getBins(i));
         }
+
+    }
+
+    public void getPercentage() {
+        Double percentage = 0.00;
+        for (int i=numOfDice ; i< numOfDice*6+1 ; i ++){
+           percentage = (double)diceBin.getBins(i) /rollingDiceNum;
+           
+            System.out.println(i +  " Percent:" + percentage);
+        }
+
 
     }
 
